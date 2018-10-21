@@ -1,0 +1,1 @@
+/s /v "/qn reboot=r"
