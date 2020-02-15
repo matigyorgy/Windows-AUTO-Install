@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Preset xmlns="urn:schemas-nliteos-com:pn.v1">
+	<Date>02/15/2020 15:50:49</Date>
+	<AppInfo>
+		<Version>1.9.0.7304</Version>
+		<Licensed>No</Licensed>
+		<Protections>Yes</Protections>
+		<Host>Windows 10 Home (1909) x86 - Client 10.0.18363.657 (hu-HU)</Host>
+	</AppInfo>
+	<ImageInfo>
+		<Version mode="offline">Windows 7 Enterprise (SP1) x86 - Client 6.1.7601.17514 (hu-HU)</Version>
+		<GUID>{6531DE39-BDE4-46EE-9A54-6B563EA4A2CA}</GUID>
+	</ImageInfo>
+	<RemoveComponents>
+		<c>langenglishus 'English (US)'</c>
+	</RemoveComponents>
+	<Compatibility protectHidden="false">
+		<ComponentFeatures>
+			<Feature enabled="yes">DefaultFonts</Feature>
+			<Feature enabled="yes">OfficeSupport</Feature>
+			<Feature enabled="no">NetworkDiscovery</Feature>
+			<Feature enabled="no">NetworkMap</Feature>
+			<Feature enabled="no">NvidiaSetup</Feature>
+			<Feature enabled="yes">Printing</Feature>
+			<Feature enabled="yes">Recommended-All</Feature>
+			<Feature enabled="no">SamsungSwitch</Feature>
+			<Feature enabled="yes">ServicingStack</Feature>
+			<Feature enabled="no">ShellSearchSupport</Feature>
+			<Feature enabled="no">Recommended-Tablet</Feature>
+			<Feature enabled="no">USBModem</Feature>
+			<Feature enabled="yes">USB</Feature>
+			<Feature enabled="yes">VideoPlayback</Feature>
+			<Feature enabled="no">VPN</Feature>
+			<Feature enabled="no">VisualStudio</Feature>
+			<Feature enabled="yes">ActivationKMS</Feature>
+			<Feature enabled="yes">Activation</Feature>
+			<Feature enabled="yes">WindowsUpdate</Feature>
+			<Feature enabled="yes">WLAN</Feature>
+		</ComponentFeatures>
+		<MachineDrivers>
+			<Machine enabled="yes">HostMachine</Machine>
+			<Machine enabled="no">Hyper-V VM</Machine>
+			<Machine enabled="no">Parallels VM</Machine>
+			<Machine enabled="no">Virtual Box VM</Machine>
+			<Machine enabled="no">VMware VM</Machine>
+		</MachineDrivers>
+	</Compatibility>
+	<Features></Features>
+	<AddPackages></AddPackages>
+	<Drivers showHidden="false">
+		<AddDrivers></AddDrivers>
+	</Drivers>
+	<Unattended mode="1">
+		<OEMSetupComplete>false</OEMSetupComplete>
+		<AnswerFileLocationPanther>false</AnswerFileLocationPanther>
+		<AnswerFileLocationBoot>false</AnswerFileLocationBoot>
+		<SaveBothArch>false</SaveBothArch>
+		<settings pass="oobeSystem">
+			<component name="Microsoft-Windows-International-Core">
+				<InputLocale>040e:0000040e</InputLocale>
+				<SystemLocale>hu-HU</SystemLocale>
+				<UILanguage>hu-HU</UILanguage>
+				<UILanguageFallback>hu-HU</UILanguageFallback>
+				<UserLocale>hu-HU</UserLocale>
+			</component>
+			<component name="Microsoft-Windows-Shell-Setup">
+				<TimeZone>Central Europe Standard Time</TimeZone>
+				<OOBE>
+					<HideEULAPage>true</HideEULAPage>
+					<HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
+					<NetworkLocation>Other</NetworkLocation>
+					<SkipMachineOOBE>true</SkipMachineOOBE>
+					<SkipUserOOBE>true</SkipUserOOBE>
+				</OOBE>
+				<UserAccounts>
+					<LocalAccounts>
+						<LocalAccount>
+							<DisplayName>admin</DisplayName>
+							<Group>Administrators</Group>
+							<Name>admin</Name>
+							<Password>
+								<PlainText>false</PlainText>
+								<Value>agBlAGwAcwB6AG8AMQAyADMAUABhAHMAcwB3AG8AcgBkAA==</Value>
+							</Password>
+						</LocalAccount>
+					</LocalAccounts>
+				</UserAccounts>
+			</component>
+		</settings>
+		<settings pass="specialize">
+			<component name="Microsoft-Windows-Security-SPP-UX">
+				<SkipAutoActivation>true</SkipAutoActivation>
+			</component>
+			<component name="Microsoft-Windows-Shell-Setup">
+				<ComputerName>WIN-VPS</ComputerName>
+			</component>
+		</settings>
+		<settings pass="windowsPE">
+			<component name="Microsoft-Windows-International-Core-WinPE">
+				<InputLocale>040e:0000040e</InputLocale>
+				<SystemLocale>hu-HU</SystemLocale>
+				<UILanguage>hu-HU</UILanguage>
+				<UILanguageFallback>hu-HU</UILanguageFallback>
+				<UserLocale>hu-HU</UserLocale>
+				<SetupUILanguage>
+					<UILanguage>hu-HU</UILanguage>
+				</SetupUILanguage>
+			</component>
+			<component name="Microsoft-Windows-Setup">
+				<Diagnostics>
+					<OptIn>false</OptIn>
+				</Diagnostics>
+				<DiskConfiguration>
+					<WillShowUI>OnError</WillShowUI>
+					<Disk>
+						<DiskID>0</DiskID>
+						<GPTDisk>false</GPTDisk>
+						<WillWipeDisk>true</WillWipeDisk>
+						<CreatePartitions>
+							<CreatePartition>
+								<Extend>true</Extend>
+								<Order>1</Order>
+								<Type>Primary</Type>
+							</CreatePartition>
+						</CreatePartitions>
+						<ModifyPartitions>
+							<ModifyPartition>
+								<Active>true</Active>
+								<Format>NTFS</Format>
+								<InstallTo>true</InstallTo>
+								<Label>Rendszer</Label>
+								<Letter>C</Letter>
+								<Order>1</Order>
+								<PartitionID>1</PartitionID>
+							</ModifyPartition>
+						</ModifyPartitions>
+					</Disk>
+				</DiskConfiguration>
+				<DynamicUpdate>
+					<WillShowUI>OnError</WillShowUI>
+				</DynamicUpdate>
+				<ImageInstall>
+					<OSImage>
+						<WillShowUI>OnError</WillShowUI>
+						<InstallFrom>
+							<MetaData>
+								<Key>/IMAGE/NAME</Key>
+								<Value>Windows 7 ENTERPRISE</Value>
+							</MetaData>
+						</InstallFrom>
+						<InstallTo>
+							<DiskID>0</DiskID>
+							<PartitionID>1</PartitionID>
+						</InstallTo>
+					</OSImage>
+				</ImageInstall>
+				<UserData>
+					<AcceptEula>true</AcceptEula>
+				</UserData>
+			</component>
+		</settings>
+	</Unattended>
+	<Tweaks>
+		<Settings></Settings>
+		<Services></Services>
+		<ExtraServices></ExtraServices>
+	</Tweaks>
+	<ApplyOptions>
+		<ImageTasks>
+			<Task>imageSaveRebuild</Task>
+			<Task>imageFormatWim</Task>
+			<Task>imageOptionsCreateIso</Task>
+		</ImageTasks>
+		<AutoIsoFile>C:\Users\Mati György\Desktop\ISO\kieg\Win7_x86_AUTO.iso</AutoIsoFile>
+		<AutoIsoLabel>Win7_x86_AUTO</AutoIsoLabel>
+		<AutoSplitSize>4000</AutoSplitSize>
+		<CleanHotfixedLeftovers>0</CleanHotfixedLeftovers>
+		<ReuseDriverCache>false</ReuseDriverCache>
+	</ApplyOptions>
+	<Execution>
+		<Remove>
+			<Item type="File">
+				<PathOriginal>C:\Users\Mati György\Desktop\ISO\hu_windows_7_enterprise_with_sp1_x86_dvd_u_677744\sources\$OEM$\$$\Setup\Files\VMware-tools-10.3.2-9925305-x86_64.exe</PathOriginal>
+				<ParamsOriginal>/s /v "/qn REBOOT=ReallySuppress"</ParamsOriginal>
+				<IndexOriginal>0</IndexOriginal>
+			</Item>
+			<Item type="File">
+				<PathOriginal>C:\Users\Mati György\Desktop\ISO\hu_windows_7_enterprise_with_sp1_x86_dvd_u_677744\sources\$OEM$\$$\Setup\Files\DRP.bat</PathOriginal>
+				<ParamsOriginal></ParamsOriginal>
+				<IndexOriginal>1</IndexOriginal>
+			</Item>
+		</Remove>
+		<Change></Change>
+		<Add>
+			<Item type="File">
+				<Path>C:\Users\Mati György\Desktop\ISO\kieg\VMware-tools-10.3.2-9925305-x86_64.exe</Path>
+				<Params>/S /v "/qn REBOOT=R"</Params>
+				<Index>2</Index>
+			</Item>
+			<Item type="File">
+				<Path>C:\Users\Mati György\Desktop\ISO\kieg\DRP.bat</Path>
+				<Params></Params>
+				<Index>3</Index>
+			</Item>
+			<Item type="Placeholder">
+				<Index>4</Index>
+			</Item>
+		</Add>
+	</Execution>
+	<Registry></Registry>
+</Preset>
