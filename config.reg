@@ -1,0 +1,52 @@
+; Sets kills background services in 4 seconds to be inline with the per users app settings
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control]
+"WaitToKillServiceTimeout"="4000"
+
+; Disable hibernate
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+"HibernateEnabledDefault"=dword:00000000
+
+; Disable “This App is Preventing Shutdown or Restart” Screen
+[HKEY_USERS\.DEFAULT\Control Panel\Desktop]
+"WaitToKillAppTimeout"="4000"
+"HungAppTimeout"="5000"
+"AutoEndTasks"="1"
+
+
+; Set Control Panel view to Large icons (Classic)
+[HKEY_USERS\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel]
+"StartupPage"="1"
+"AllItemsIconView"="0"
+"DisableSearchBoxSuggestions"=dword:00000001
+
+; Additional disable cortana
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Personalization\Settings]
+"AcceptedPrivacyPolicy"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
+"RestrictImplicitTextCollection"=dword:00000001
+"RestrictImplicitInkCollection"=dword:00000001
+"BingSearchEnabled"=dword:00000000
+"AllowSearchToUseLocation"=dword:00000000
+"CortanaConsent"=dword:00000000
+"DisableSearchBoxSuggestions"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\InputPersonalization\TrainedDataStore]
+"HarvestContacts"=dword:00000000
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+"DisableEdgeDesktopShortcutCreation"=dword:00000001
+
+; Set high performance power mode
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{025A5937-A6BE-4686-A844-36FE4BEC8B6D}]
+"PreferredPlan"="8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c"
+
+; Enable NumLOck
+[HKEY_CURRENT_USER\Control Panel\Keyboard]
+"InitialKeyboardIndicators"="00000002"
+
+
+; Disable web search in the windows taskbar
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
+"BingSearchEnabled"=dword:00000000
+"AllowSearchToUseLocation"=dword:00000000
+"CortanaConsent"=dword:00000000
